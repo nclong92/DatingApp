@@ -21,7 +21,7 @@
 
   <!-- Known As -->
   <div class="form-group">
-    <input [ngClass]="{'is-invalid': registerForm.get('knowsAs').error && registerForm.get('knowsAs').touched}"
+    <input [ngClass]="{'is-invalid': registerForm.get('knowsAs').errors && registerForm.get('knowsAs').touched}"
       class="form-control" placeholder="Known As" formControlName="knowsAs">
     <div class="invalid-feedback"
       *ngIf="registerForm.get('knowsAs').touched && registerForm.get('knowsAs').hasError('requried')">
@@ -91,6 +91,3 @@
     <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
   </div>
 </form>
-
-<!-- <p>Form value: {{registerForm.value | json}}</p>
-<p>Form status: {{registerForm.status | json}}</p> -->
